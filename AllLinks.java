@@ -15,7 +15,7 @@ class FindAllLinks {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.itopmusic.com/");
+        driver.get("https://m.youtube.com/?persist_app=1&app=m");
 
         java.util.List<WebElement> links = driver.findElements(By.tagName("a"));
 
@@ -25,6 +25,7 @@ class FindAllLinks {
 
             out.println(links.get(i).getText());
 
+        driver.quit();
 
     }
 
